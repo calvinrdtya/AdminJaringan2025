@@ -17,12 +17,6 @@
 </div>
 <br>
 
-
-<!-- - [Apa itu TCP/IP?](#apa-itu-tcpip)
-- [Analisis File http.cap dengan Wireshark](#analisis-file-httpcap-dengan-wireshark)
-- [Type of data deliveries](#type-of-data-deliveries)
-- [Kesimpulan](#kesimpulan) -->
-
 # Chapter 4 Process Control
 
 ## Komponen Proses

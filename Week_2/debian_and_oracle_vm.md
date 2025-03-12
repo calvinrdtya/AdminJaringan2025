@@ -29,7 +29,7 @@ Download VirtualBox di situs resmi https://www.virtualbox.org/wiki/Downloads ses
 
 Download ISO Debian di situs resmi https://www.debian.org/download 
 
-[![img-1](img/vm.png)](img)
+[![img-1](img/debian_iso.png)](img)
 
 ### Install VirtualBox
 

@@ -4,7 +4,7 @@
 </div>
 <br />
 <div align="center">
-  <img src="./Week-1/img/pens.png" alt="Logo PENS">
+  <img src="./Week_1/img/pens.png" alt="Logo PENS">
   <h3 style="text-align: center;">Disusun Oleh :</h3>
   <p style="text-align: center;">
     <strong>Calvin Raditya Sandy Winarto</strong><br>

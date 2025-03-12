@@ -78,3 +78,58 @@ Setelah samba terinstall jalankan perintah dibawah untuk membuat direktori baru 
 Jika direktori `share` sudah dibuat sekarang jalankan perintah dibawah untuk mengubah izin akses pada direktori `/home/share` agar dapat dibaca, ditulis, dan dieksekusi oleh semua pengguna.
 
     chmod 777 /home/share
+
+Setelah semuanya berhasil restart samba dengan perintah
+
+    systemctl restart smbd
+
+Akses folder melalui windows
+ [![img-1](img/install_samba.png)](img)
+
+Akses folder melalui linux
+ [![img-1](img/install_samba.png)](img)
+
+
+## C. Rangkuman tentang Manajemen Paket
+
+### Sumber Perangkat Lunak Debian GNU/Linux
+Debian menggunakan **repositori** untuk distribusi perangkat lunak, memungkinkan pengelolaan dan pembaruan sistem secara terpusat tanpa perlu mengunjungi situs aplikasi secara langsung.
+
+#### 1. Berkas sources.list
+    apt edit-sources
+
+    nano /etc/apt/sources.list
+
+#### Elemen penting dalam sources.list:
+  - `deb` → Repositori biner
+  - `deb-src` → Repositori sumber
+  - `http/https` → Alamat server
+  - `bookworm/bookworm-security` → Cabang repositori
+  - `main, contrib, non-free, non-free-firmware` → Komponen repositori
+
+
+#### 2. Cabang & Komponen Repositori
+  - main → 100% bebas sesuai DFSG, mendapat dukungan penuh
+  - contrib → Bebas, tetapi bergantung pada non-free
+  - non-free → Tidak sesuai DFSG
+  - non-free-firmware → Firmware non-free, sejak Debian 12
+
+#### 3. Paket Backport
+Backports menyediakan versi terbaru dari aplikasi pada repositori pengembangan yang dikompilasi ulang agar kompatibel dengan rilis stabil. Tidak diaktifkan secara default tetapi menjaga stabilitas sistem.
+
+#### 4. Memodifikasi Repositori
+Sebelum menambah `contrib` atau `non-free`, perhatikan:
+  - Kebebasan terbatas (tidak sepenuhnya bebas)
+  - Dukungan terbatas (hanya main yang mendapat dukungan penuh)
+  - Integritas sistem (penggunaan non-free dapat mengubah sistem Debian)
+
+Contoh konfigurasi sources.list
+
+  - Hanya paket bebas:
+
+        apt edit-sources
+
+  - Paket bebas & proprietary
+
+        deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+
